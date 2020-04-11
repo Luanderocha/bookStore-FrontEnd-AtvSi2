@@ -1,6 +1,9 @@
 <template>
     <div class="form">
         <form action="submit">
+            <div class="form-group">
+
+            </div>
             <div class="form row">
                 <div class="col-md-1">
                     <span>Name:</span>
@@ -27,8 +30,13 @@
                     <label v-if="pagesReq" id="nameRequired">The pages field is required</label>
                 </div>
             </div>
+            <div class="form-row">
+                <div class="col-md-2">
+                    <button v-on:click="register()" type="button" class="form-control btn btn-dark" id="btn">Register</button>
+                </div>
+            </div>
         </form>
-        <button v-on:click="register()" type="button" class="form-control btn btn-dark" id="btn">Register</button>
+
     </div>
 </template>
 
@@ -42,7 +50,8 @@ export default {
             pages: '',
             nameReq: false,
             editionReq: false,
-            pagesReq: false
+            pagesReq: false,
+            sucess: false
         }
     },
     methods: {
@@ -59,7 +68,9 @@ export default {
                 this.nameReq = false
                 this.editionReq = false
                 this.pagesReq = false
+                this.sucess = true
             } else {
+                this.sucess = false
                 this.nameReq = false
                 this.editionReq = false
                 this.pagesReq = false
@@ -73,9 +84,6 @@ export default {
                     this.pagesReq = true
                 }
             }
-
-
-
         }
     }
 }
@@ -87,6 +95,7 @@ div {
 }
 
 #btn {
+    background-color: black;
     margin-top: 0.8rem;
 }
 

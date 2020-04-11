@@ -1,6 +1,6 @@
 <template>
     <div>
-        <FormBook v-on:emit-book="addBook"/>
+        <FormBook v-on:emit-book="addBook" />
         <div class="box" v-for="(b,index) in books" :key="index">
             <div class="form-row  back">
                 <div class="col-mr-11">
@@ -26,24 +26,23 @@
 </template>
 
 <script>
-
 import FormBook from './FormBook'
 
 export default {
-    name:'Box',
-    components:{
+    name: 'Box',
+    components: {
         FormBook
     },
-    data(){
-        return{
-            books:[]
+    data() {
+        return {
+            books: []
         }
     },
-    methods:{
-        addBook(book){
-           this.books.push(book);
+    methods: {
+        addBook(book) {
+            this.books.push(book);
         },
-        removeBook(index){
+        removeBook(index) {
             this.books.pop(index);
         }
     }
@@ -51,16 +50,18 @@ export default {
 </script>
 
 <style>
-    .box{
-        font-size: 0.9rem;
-        border-bottom: 0.01rem solid gray;
-        margin-top:0.8rem;
-    }
-    .book{
-        margin-right: 1rem;
-    }
-    .back{
-        background: rgb(230, 230, 230);
-        border: 0.4rem solid transparent;
-    }
+.box {
+    font-size: 0.9rem;
+    border-bottom: 0.01rem solid gray;
+    margin-top: 0.8rem;
+}
+
+.book {
+    margin-right: 1rem;
+}
+
+.back {
+    background: rgb(230, 230, 230);
+    border: 0.4rem solid transparent;
+}
 </style>
