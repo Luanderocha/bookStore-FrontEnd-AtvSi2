@@ -1,4 +1,4 @@
-# livraria
+# Book Store
 
 ## Project setup
 ```
