@@ -17,6 +17,7 @@ export default {
     text-align: center;
 }
 #title{
-    text-shadow: 0.15rem 0.15rem rgba(128, 128, 128, 0.349);
+    font-size: 3rem;
+    text-shadow: 0.11rem 0.11rem rgba(128, 128, 128, 0.349);
 }
 </style>
